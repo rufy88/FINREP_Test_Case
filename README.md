@@ -66,155 +66,182 @@ FINREP_Test_Case/
 │   └── FINREP_TestCaseSupport_<Scenario>_<Ambito>_<YYYYMMDD>_vNN.xlsx
 │
 └── README.md
+```
 
-FINREP_Test_Case_KB
-Contiene la Knowledge Base ufficiale del progetto:
+## FINREP_Test_Case_KB
 
-AFU e ATE
-storico test case
-requisiti non funzionali
-matrici di tracciabilità
-struttura tabelle
+Contiene la **Knowledge Base ufficiale del progetto**:
 
-FINREP_Test_Case_Output
-Contiene gli output generati automaticamente dall’agente:
+- AFU e ATE  
+- Storico test case  
+- Requisiti non funzionali  
+- Matrici di tracciabilità  
+- Struttura tabelle  
 
-file Excel dei casi di test
-versioning progressivo
-tracciabilità commit GitHub
+---
 
+## FINREP_Test_Case_Output
 
-Multi‑Agent Architecture
-La soluzione è basata su 4 agenti distinti, coordinati da un Orchestrator.
-1. FINREP Orchestrator
-Ruolo di governo end‑to‑end
-Responsabilità:
+Contiene gli **output generati automaticamente dall’agente**:
 
-gestione del flusso completo
-coordinamento degli specialisti
-controlli di qualità e coerenza
-scrittura output su GitHub
-generazione report DOCX
-invio email di notifica agli stakeholder
+- File Excel dei casi di test  
+- Versioning progressivo  
+- Tracciabilità commit GitHub  
 
-2. KB / Requirement Parsing Specialist
-Analisi requisiti
-Responsabilità:
+---
 
-parsing AFU e ATE
-identificazione flussi, tabelle, ETL, TWS
-costruzione matrice requisito → processo → oggetti tecnici
-individuazione GAP informativi
+## Multi‑Agent Architecture
 
-3. Pattern & Test Design Specialist
-Progettazione dei test
-Responsabilità:
+La soluzione è basata su **4 agenti distinti**, coordinati da un **Orchestrator**.
 
-analisi storico test case
-riconoscimento pattern
-classificazione processi
-progettazione:
+### 1. FINREP Orchestrator  
+**Ruolo:** governo end‑to‑end  
 
-test positivi
-test negativi
-test di integrazione
-test ETL / WRK
-test Data Quality
-test WebApp
-test di riconciliazione
+**Responsabilità:**
+- Gestione del flusso completo  
+- Coordinamento degli specialisti  
+- Controlli di qualità e coerenza  
+- Scrittura output su GitHub  
+- Generazione report DOCX  
+- Invio email di notifica agli stakeholder  
 
+---
 
+### 2. KB / Requirement Parsing Specialist  
+**Ruolo:** analisi requisiti  
 
-4. Excel‑Builder Specialist
-Delivery specialist
-Responsabilità:
+**Responsabilità:**
+- Parsing AFU e ATE  
+- Identificazione flussi, tabelle, ETL, TWS  
+- Costruzione matrice requisito → processo → oggetti tecnici  
+- Individuazione GAP informativi  
 
-utilizzo del template storico
-costruzione Excel finale
-rispetto domini e strutture
-conversione in Base64
-consegna file all’Orchestrator (senza scrivere su GitHub)
+---
 
+### 3. Pattern & Test Design Specialist  
+**Ruolo:** progettazione dei test  
 
-Output Generated
-Excel – Test Case Support
-File Excel conforme a 1_Storico_Test_Case.xlsx contenente, per ogni test:
+**Responsabilità:**
+- Analisi storico test case  
+- Riconoscimento pattern  
+- Classificazione processi  
+- Progettazione:
+  - Test positivi  
+  - Test negativi  
+  - Test di integrazione  
+  - Test ETL / WRK  
+  - Test Data Quality  
+  - Test WebApp  
+  - Test di riconciliazione  
 
-ID Test
-Ambito
-Obiettivo Test
-Descrizione Test
-Esito Atteso
-Owner del test
-Stato del test
-(Da Avviare, In Corso, Chiuso, Annullato)
-Esito del test
-(N.A., OK, KO)
-Note Owner
-Data inizio
-Data fine
-Note tecniche
-(processo, tipo test, tabelle, ETL/TWS)
+---
 
-Documento DOCX di Resoconto
+### 4. Excel‑Builder Specialist  
+**Ruolo:** delivery specialist  
+
+**Responsabilità:**
+- Utilizzo del template storico  
+- Costruzione Excel finale  
+- Rispetto domini e strutture  
+- Conversione in Base64  
+- Consegna file all’Orchestrator  
+  *(senza scrivere su GitHub)*  
+
+---
+
+## Output Generated
+
+### Excel – Test Case Support
+
+File Excel conforme a **1_Storico_Test_Case.xlsx** contenente, per ogni test:
+
+- ID Test  
+- Ambito  
+- Obiettivo Test  
+- Descrizione Test  
+- Esito Atteso  
+- Owner del test  
+- Stato del test  
+  *(Da Avviare, In Corso, Chiuso, Annullato)*  
+- Esito del test  
+  *(N.A., OK, KO)*  
+- Note Owner  
+- Data inizio  
+- Data fine  
+- Note tecniche  
+  *(processo, tipo test, tabelle, ETL/TWS)*  
+
+---
+
+### Documento DOCX di Resoconto
+
 Generato dall’Orchestrator e inviato via email:
 
-sintesi attività
-documenti KB utilizzati
-copertura requisiti
-GAP individuati
-riferimento file Excel
-link alla cartella GitHub di output
+- Sintesi attività  
+- Documenti KB utilizzati  
+- Copertura requisiti  
+- GAP individuati  
+- Riferimento file Excel  
+- Link alla cartella GitHub di output  
 
+---
 
-Naming Convention
+## Naming Convention
+
 Gli output Excel seguono la convenzione:
+
+```text
 FINREP_TestCaseSupport_<Scenario>_<Ambito>_<YYYYMMDD>_vNN.xlsx
+```
 
-Esempio:
-FINREP_TestCaseSupport_MIX_ALL_20260319_v01.xlsx
+## GitHub as Source of Truth
 
-
-GitHub as Source of Truth
 GitHub viene utilizzato come:
 
-repository di conoscenza ufficiale
-sistema di versioning
-tracciabilità delle delivery
-punto di accesso per audit e revisione
+- Repository di conoscenza ufficiale  
+- Sistema di versioning  
+- Tracciabilità delle delivery  
+- Punto di accesso per audit e revisione  
 
 Ogni generazione è:
 
-ripetibile
-versionata
-verificabile via commit history
+- Ripetibile  
+- Versionata  
+- Verificabile via commit history  
 
+---
 
-Compliance & Audit
+## Compliance & Audit
+
 La soluzione è progettata per garantire:
 
-tracciabilità end‑to‑end
-auditabilità
-ripetibilità
-separazione delle responsabilità
-riduzione del rischio operativo
+- Tracciabilità end‑to‑end  
+- Auditabilità  
+- Ripetibilità  
+- Separazione delle responsabilità  
+- Riduzione del rischio operativo  
 
+---
 
-Status
-✅ Architettura multi‑agent definita
-✅ Integrazione GitHub read/write
-✅ Output Excel standardizzato
-✅ Reporting DOCX e email delivery
+## Status
 
-Next Steps (optional)
+✅ Architettura multi‑agent definita  
+✅ Integrazione GitHub read/write  
+✅ Output Excel standardizzato  
+✅ Reporting DOCX e email delivery  
 
-Dashboard di copertura requisiti
-Integrazione CI/CD
-Estensione a ulteriori domini regolamentari
-KPI di qualità test
+---
 
+## Next Steps (optional)
 
-Maintainers
+- Dashboard di copertura requisiti  
+- Integrazione CI/CD  
+- Estensione a ulteriori domini regolamentari  
+- KPI di qualità test  
 
-Solution Owner: FINREP GenAI Team
-Repository Owner: Project Team
+---
+
+## Maintainers
+
+- **Solution Owner:** FINREP GenAI Team  
+- **Repository Owner:** Project Team  
