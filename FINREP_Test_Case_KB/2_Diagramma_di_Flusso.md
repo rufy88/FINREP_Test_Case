@@ -1,6 +1,6 @@
 # 2_Diagramma_di_Flusso — Logica dei Flussi FINREP (Shadow Semantica)
 
-Fonte ufficiale: `2_Diagramma di Flusso.docx`.
+Fonte ufficiale: `2_Diagramma_di_Flusso.docx`.
 
 Questo documento descrive in forma testuale e strutturata
 la logica dei flussi FINREP rappresentati nei diagrammi,
