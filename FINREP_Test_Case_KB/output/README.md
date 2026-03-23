@@ -1,0 +1,1 @@
+In questa cartella ci sono gli artefatti prodotti dall'agent.
